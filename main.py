@@ -27,7 +27,7 @@ def get_domo():
   client = InfluxDBClient('192.168.0.3', 8086, '', '', 'domoticz')
   r = client.query("select value from device_outside_temperature limit 1")
   print(r)
-  
+
 def get_weather():
   res = requests.get("http://www.bom.gov.au/fwo/IDV60901/IDV60901.94870.json");
   r = res.json()
